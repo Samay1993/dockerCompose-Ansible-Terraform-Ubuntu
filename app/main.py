@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Define connection parameters for the PostgreSQL database
 conn_params = {
-    "host": "localhost",
+    "host": "postgres",
     "port": 5432,
     "database": "mydatabase",
     "user": "postgres",
@@ -60,7 +60,7 @@ def fetch_data():
     return jsonify({"data": rows}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0')
 
 
 
