@@ -1,0 +1,34 @@
+---
+- name: Deploy Docker stack
+  hosts: localhost
+
+  tasks:
+  - name: Create directory
+    file:
+      path: ./ansible-dest
+      state: directory
+
+  - name: Copy application code
+    copy:
+      src: ../app
+      dest: ./ansible-dest/
+
+  - name: Copy dockerfile
+    copy:
+      src: ../dockerfile
+      dest: ./ansible-dest/Dockerfile
+
+  - name: Copy docker-compose.yaml file
+    copy:
+      src: ../docker-compose.yaml
+      dest: ./ansible-dest/docker-compose.yaml
+
+  - name: Copy database env file
+    copy:
+      src: ../database.env
+      dest: ./ansible-dest/database.env
+
+  - name: Start Docker stack
+    command: docker-compose up -d
+    args:
+      chdir: ./ansible-dest

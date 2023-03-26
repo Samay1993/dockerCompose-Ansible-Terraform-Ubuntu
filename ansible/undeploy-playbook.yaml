@@ -1,0 +1,8 @@
+- name: Undeploy app
+  hosts: localhost
+
+  tasks:
+    - name: Stop and remove containers
+      command: docker-compose down -v
+      args:
+        chdir: ./ansible-dest
