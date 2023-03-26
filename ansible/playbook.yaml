@@ -15,7 +15,7 @@
 
   - name: Copy dockerfile
     copy:
-      src: ../dockerfile
+      src: ../Dockerfile
       dest: ./ansible-dest/Dockerfile
 
   - name: Copy docker-compose.yaml file
