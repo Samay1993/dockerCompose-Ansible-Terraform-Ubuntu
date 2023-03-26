@@ -14,7 +14,7 @@ conn_params = {
 
 # Create a connection to the database
 conn = psycopg2.connect(**conn_params)
-
+print("Connection to the database was successful...")
 # Define a route to insert data into the database
 @app.route('/insert')
 def insert_data():
