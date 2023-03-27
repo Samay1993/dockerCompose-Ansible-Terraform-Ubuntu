@@ -63,6 +63,7 @@ Task involves below steps:
         - terraform validate
         - terraform plan
         - terraform apply or terraform apply --auto-approve
+    + App will be accessible on _container-public-ip:5555/insert_ and _container-public-ip:5555/fetch_
     + In order to take down your project from AWS, just simply run _terraform destroy_ or _terraform destroy --auto-approve_.
 
 -  To answer the question *How would you structure your Terraform project if you have multiple environments and use different cloud providers?*
