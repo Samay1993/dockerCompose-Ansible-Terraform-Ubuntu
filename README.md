@@ -1,3 +1,5 @@
+## [Project Goal](Project-Goal.md)
+
 ## Task description:
 
 There are basically 3 different set of tasks that have been completed:
