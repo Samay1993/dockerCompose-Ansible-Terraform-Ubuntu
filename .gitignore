@@ -1,1 +1,4 @@
 *ansible-dest*
+*.terraform
+*tfstate*
+*lock.hcl
